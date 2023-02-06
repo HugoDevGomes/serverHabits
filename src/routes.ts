@@ -238,7 +238,7 @@ export async function appRoutes(app: FastifyInstance){
             await request.jwtVerify()
             
             const summary = await prisma.$queryRaw`
-            SELECT 
+            SELECT DISTINCT
         D.id, 
         D.date,
         (
