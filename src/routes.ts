@@ -174,7 +174,7 @@ export async function appRoutes(app: FastifyInstance){
 
             return {
                 possibleHabits,
-                completedHabits
+                completedHabits2
             }
         } catch (error) {
             return {
