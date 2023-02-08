@@ -21,7 +21,7 @@ async function bootstrap() {
 
 
     await app.listen({
-        port: 3333, host: '0.0.0.0'
+        port: 443, host: '0.0.0.0'
     })
 
     
