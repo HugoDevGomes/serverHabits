@@ -20,9 +20,10 @@ async function bootstrap() {
     app.register(appRoutes)
 
 
-    await app.listen({
-        port: 3333, host: '0.0.0.0'
-    })
+    await app.listen(
+        process.env.PORT || 
+         3333
+    )
  // teste git
     
 }
