@@ -4,6 +4,7 @@ import { appRoutes } from './routes'
 import jwt from '@fastify/jwt'
 
 const idSecret = process.env.SECRET;
+const portNumber = Number(process.env.PORT);
 
 async function bootstrap() {
 
@@ -19,11 +20,12 @@ async function bootstrap() {
 
     app.register(appRoutes)
 
+    
 
-    await app.listen(
-        process.env.PORT || 
-         3333
-    )
+
+    await app.listen({
+        port:  portNumber || 3333 ,
+      })
  // teste git
     
 }
